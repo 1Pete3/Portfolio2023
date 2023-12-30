@@ -1,0 +1,41 @@
+@import '../../../node_modules/bootstrap/scss/functions.scss';
+@import '../../../node_modules/bootstrap/scss/variables';
+@import '../../../node_modules/bootstrap/scss/mixins';
+
+$primary: #000080;
+$secondary: #004aad;
+
+$theme-colors: map-merge(
+  $theme-colors,
+  (
+    'primary': $primary,
+    'secondary': $secondary,
+  )
+);
+
+$tertiary: #6b779b;
+$quaternary: #8c52ff;
+$filler: #eeeee4;
+
+$theme-colors: map-merge(
+  $theme-colors,
+  (
+    'tertiary': $tertiary,
+    'quaternary': $quaternary,
+    'filler': $filler
+  )
+);
+
+.logo {
+  height: 100px;
+  width: 100px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%
+}
+
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
