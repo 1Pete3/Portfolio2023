@@ -6,15 +6,15 @@ const Footer = () => {
         <div className="col"></div>
         <div className="col"></div>
           <div className="col p-3">
-            <i className="fs-3 bg-filler px-2 py-2 border border-2 border-primary rounded-2 fi fi-brands-linkedin"></i>
+            <i className="fs-3 bg-filler px-2 pt-2 pb-1 border border-2 border-primary rounded-2 fi fi-brands-linkedin"></i>
           </div>
           
           <div className="col p-3">
-            <i className="fs-3 bg-filler px-2 py-2 border border-2 border-primary rounded-2 fi fi-brands-github"></i>
+            <i className="fs-3 bg-filler px-2 pt-2 pb-1 border border-2 border-primary rounded-2 fi fi-brands-github"></i>
           </div>
           
           <div className="col p-3">
-          <i className="fs-3 bg-filler px-2 py-2 border border-2 border-primary rounded-2 fi fi-rr-envelope"></i>
+          <i className="fs-3  bg-filler px-2 pt-2 pb-1 border border-2 border-primary rounded-2 fi fi-rr-envelope"></i>
           </div>
           <div className="col"></div>
           <div className="col"></div>

@@ -11,6 +11,48 @@ footer {
   width: 100%;
 }
 
+.home {
+  background-color: #eeeee4;
+}
+
+@media only screen and (max-width: 992px) {
+  #navbarCollapse {
+    border-top: #000080 solid 1px;
+  }
+  .navtoggleButon {
+    margin-right: 10px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3%;
+    border: #6b779b;
+  }
+  .navlinkContainer {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  .navbar-nav {
+    text-align: center;
+  }
+  .logo {
+    margin: 0 auto;
+  }
+  .navbarBrand {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .navbarBrand {
+    margin-left: 5%;
+  }
+  .logo {
+    margin: 0 auto;
+  }
+  .navlinkContainer {
+    margin: 0 auto;
+  }
+}
 /*!
  * Bootstrap  v5.3.2 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors

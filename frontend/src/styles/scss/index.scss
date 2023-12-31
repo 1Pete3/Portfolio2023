@@ -22,7 +22,7 @@ $theme-colors: map-merge(
   (
     'tertiary': $tertiary,
     'quaternary': $quaternary,
-    'filler': $filler
+    'filler': $filler,
   )
 );
 
@@ -35,7 +35,50 @@ footer {
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 100%
+  width: 100%;
+}
+.home {
+  background-color: $filler;
+}
+
+@media only screen and (max-width: 992px) {
+  #navbarCollapse {
+    border-top: $primary solid 1px;
+  }
+  .navtoggleButon {
+    margin-right: 10px;
+
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3%;
+    border: $tertiary;
+  }
+  .navlinkContainer {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  .navbar-nav {
+    text-align: center;
+  }
+  .logo {
+    margin: 0 auto;
+  }
+  .navbarBrand {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .navbarBrand {
+    margin-left: 5%;
+  }
+  .logo {
+    margin: 0 auto;
+  }
+  .navlinkContainer {
+    margin: 0 auto;
+  }
 }
 
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
