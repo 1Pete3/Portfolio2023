@@ -68,6 +68,7 @@ footer {
   .navbarBrand {
     width: 100%;
   }
+  
 }
 @media only screen and (min-width: 992px) {
   .navbarBrand {
@@ -79,6 +80,17 @@ footer {
   .navlinkContainer {
     margin: 0 auto;
   }
+}
+
+.homepage{
+  
+  border:red 10px solid;
+ 
+}
+.descContainer{
+  margin: 2%;
+  padding: 1%;
+  border: 10px red solid
 }
 
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';

@@ -1,9 +1,12 @@
 import express from 'express';
 import './env.js';
 import cors from 'cors';
+import getID from './controllers/githubController.js';
+
 
 const PORT = process.env.PORT;
 const app = express();
+
 
 // Middleware for handling CORS policy
 app.use(
@@ -14,10 +17,15 @@ app.use(
   })
 );
 
-app.get('/', (req, res) => {
-  return res.send('Start of my project');
+
+app.get('/',(req,res)=>{
+
+})
+
+app.get('/api/Projects' , async (req, res) => {
+  res.send(await getID());
 });
 
 app.listen(PORT, () => {
-  console.log(`App is listening on port: ${PORT}`);
+  console.log(`App is listening on  http://localhost:${PORT}`);
 });

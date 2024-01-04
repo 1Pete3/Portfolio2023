@@ -53,6 +53,16 @@ footer {
     margin: 0 auto;
   }
 }
+.homepage {
+  border: red 10px solid;
+}
+
+.descContainer {
+  margin: 2%;
+  padding: 1%;
+  border: 10px red solid;
+}
+
 /*!
  * Bootstrap  v5.3.2 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
