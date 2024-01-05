@@ -19,16 +19,16 @@ function TopNavBar() {
       <Navbar.Collapse id="navbarCollapse" className=" ">
         <div className="navlinkContainer">
           <Nav className="" style={{ maxHeight: '10%' }}>
-            <Nav.Link href="/" className="mx-5 fs-4 text-primary navlink">
+            <Nav.Link href="/Professional-Experience" className="mx-5 fs-4 text-primary navlink">
               Professional Experience
             </Nav.Link>
-            <Nav.Link href="#action2" className="mx-5 fs-4 text-primary">
+            <Nav.Link href="/Education" className="mx-5 fs-4 text-primary">
               Education
             </Nav.Link>
             <Nav.Link href="/Projects" className="mx-5 fs-4 text-primary">
               Projects
             </Nav.Link>
-            <Nav.Link href="#action2" className="mx-5 fs-4 text-primary">
+            <Nav.Link href="/Resume" className="mx-5 fs-4 text-primary">
               Resume
             </Nav.Link>
           </Nav>

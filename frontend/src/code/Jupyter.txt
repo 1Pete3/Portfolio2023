@@ -1,0 +1,286 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "70277cf7-2ff9-4c08-b08e-75e3af6d8feb",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{6607.0: 'Marina', 3225.0: 'Vinay', 8886.0: 'Connie', 16444.0: 'Isaac', 6420.0: 'Valentina'}\n",
+      "{6607.0: 'Marina', 8886.0: 'Connie', 16444.0: 'Isaac', 6420.0: 'Valentina', 3325.0: 'Vinay'}\n"
+     ]
+    }
+   ],
+   "source": [
+    "medical_costs = {}\n",
+    "medical_costs[6607.0] = \"Marina\"\n",
+    "medical_costs[3225.0] = \"Vinay\"\n",
+    "medical_costs.update({8886.0 : \"Connie\", 16444.0 : \"Isaac\", 6420.0 : \"Valentina\" })\n",
+    "print(medical_costs)\n",
+    "medical_costs.pop(3225.0)\n",
+    "medical_costs[3325.0] = \"Vinay\"\n",
+    "print(medical_costs)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "7b401701-847f-4599-906c-005bf5520c89",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "41682.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "total_cost = 0\n",
+    "for element in medical_costs:\n",
+    "    total_cost += element\n",
+    "print(total_cost)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "dc53e82e-ad2e-412c-bb0c-620a809b1048",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "8336.4\n"
+     ]
+    }
+   ],
+   "source": [
+    "average_cost = total_cost / len(medical_costs)\n",
+    "print(average_cost)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c2a2def1-32b0-41b4-85c5-7eb7d707be66",
+   "metadata": {},
+   "source": [
+    "names\tages\r\n",
+    "Marina\t27\r\n",
+    "Vinay\t24\r\n",
+    "Connie\t43\r\n",
+    "Isaac\t35\r\n",
+    "Valentina\t52"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "55e4f40c-1e4c-4a1a-b24d-c941bc1d3245",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[('Marina', 27), ('Vinay', 24), ('Connie', 43), ('Isaac', 35), ('Valentina', 52)]\n"
+     ]
+    }
+   ],
+   "source": [
+    "names = [\"Marina\", \"Vinay\", \"Connie\", \"Isaac\", \"Valentina\"]\n",
+    "ages = [27, 24, 43, 35, 52]\n",
+    "zipped_ages = list(zip(names,ages))\n",
+    "print(zipped_ages)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "id": "f79dda00-9907-48b6-a785-62b53f5549a3",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'Marina': 27, 'Vinay': 24, 'Connie': 43, 'Isaac': 35, 'Valentina': 52}\n"
+     ]
+    }
+   ],
+   "source": [
+    "names_to_ages = {}\n",
+    "for i in zipped_ages:\n",
+    "    names_to_ages[i[0]] = i[1]\n",
+    "print(names_to_ages)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 31,
+   "id": "cb7bf660-0679-4bb2-a745-5377f1d7ffb0",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Marina's age is 27\n"
+     ]
+    }
+   ],
+   "source": [
+    "marina_age = names_to_ages.get(\"Marina\", None)\n",
+    "print(\"Marina's age is {}\".format(marina_age))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "fa8ccfc5-48ad-4cbb-bea3-433cbe1ea5d8",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'Marina': {'Age': 27, 'Sex': 'Female', 'BMI': 31.1, 'Children': 2, 'Smoker': 'Non-smoker', 'Insurance_cost': 6607.0}}\n"
+     ]
+    }
+   ],
+   "source": [
+    "medical_records = {}\n",
+    "medical_records[\"Marina\"] = {\"Age\": 27, \"Sex\": \"Female\", \"BMI\": 31.1, \"Children\": 2, \"Smoker\": \"Non-smoker\", \"Insurance_cost\": 6607.0}\n",
+    "print(medical_records)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "fb25b5b0-f4f1-4a4e-948c-0405cf646152",
+   "metadata": {},
+   "source": [
+    "Name\tAge\tSex\tBMI\tChildren\tSmoker\tInsurance Cost\r\n",
+    "Vinay\t24\tMale\t26.9\t0\tNon-smoker\t3225.0\r\n",
+    "Connie\t43\tFemale\t25.3\t3\tNon-smoker\t8886.0\r\n",
+    "Isaac\t35\tMale\t20.6\t4\tSmoker\t16444.0\r\n",
+    "Valentina\t52\tFemale\t18.7\t1\tNon-smoker\t6420.0"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "3bb281f9-0464-4a03-a01f-96074808412b",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'Marina': {'Age': 27, 'Sex': 'Female', 'BMI': 31.1, 'Children': 2, 'Smoker': 'Non-smoker', 'Insurance_cost': 6607.0}, 'Vinay': {'Age': 24, 'Sex': 'Male', 'BMI': 26.9, 'Children': 0, 'Smoker': 'Non-smoker', 'Insurance_cost': 3225.0}, 'Connie': {'Age': 43, 'Sex': 'Female', 'BMI': 25.3, 'Children': 3, 'Smoker': 'Non-smoker', 'Insurance_cost': 8886.0}, 'Isaac': {'Age': 35, 'Sex': 'Male', 'BMI': 20.6, 'Children': 4, 'Smoker': 'Smoker', 'Insurance_cost': 16444.0}, 'Valentina': {'Age': 52, 'Sex': 'Female', 'BMI': 18.7, 'Children': 1, 'Smoker': 'Non-smoker', 'Insurance_cost': 6420.0}}\n"
+     ]
+    }
+   ],
+   "source": [
+    "medical_records[\"Vinay\"] = {\"Age\": 24, \"Sex\": \"Male\", \"BMI\": 26.9, \"Children\": 0, \"Smoker\": \"Non-smoker\", \"Insurance_cost\": 3225.0}\n",
+    "medical_records[\"Connie\"] = {\"Age\": 43, \"Sex\": \"Female\", \"BMI\": 25.3, \"Children\": 3, \"Smoker\": \"Non-smoker\", \"Insurance_cost\": 8886.0}\n",
+    "medical_records[\"Isaac\"] = {\"Age\": 35, \"Sex\": \"Male\", \"BMI\": 20.6, \"Children\": 4, \"Smoker\": \"Smoker\", \"Insurance_cost\": 16444.0}\n",
+    "medical_records[\"Valentina\"] = {\"Age\": 52, \"Sex\": \"Female\", \"BMI\": 18.7, \"Children\": 1, \"Smoker\": \"Non-smoker\", \"Insurance_cost\": 6420.0}\n",
+    "print(medical_records)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "11a8cf7c-3de2-4f24-a97b-a63061df4373",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Connie's insurance cost is $8,886.00 dollars.\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(\"Connie's insurance cost is ${0:,.2f} dollars.\".format(medical_records[\"Connie\"][\"Insurance_cost\"]))\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "450165b7-5766-456c-b93e-c694bbf3f99a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'Marina': {'Age': 27, 'Sex': 'Female', 'BMI': 31.1, 'Children': 2, 'Smoker': 'Non-smoker', 'Insurance_cost': 6607.0}, 'Connie': {'Age': 43, 'Sex': 'Female', 'BMI': 25.3, 'Children': 3, 'Smoker': 'Non-smoker', 'Insurance_cost': 8886.0}, 'Isaac': {'Age': 35, 'Sex': 'Male', 'BMI': 20.6, 'Children': 4, 'Smoker': 'Smoker', 'Insurance_cost': 16444.0}, 'Valentina': {'Age': 52, 'Sex': 'Female', 'BMI': 18.7, 'Children': 1, 'Smoker': 'Non-smoker', 'Insurance_cost': 6420.0}}\n"
+     ]
+    }
+   ],
+   "source": [
+    "medical_records.pop(\"Vinay\")\n",
+    "print(medical_records)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "1fff60db-4adf-46fe-8868-eb29c67b1bac",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Marina is a 27 year old Female Non-smoker with a BMI of 31.1 and insurance cost of 6607.0\n",
+      "Connie is a 43 year old Female Non-smoker with a BMI of 25.3 and insurance cost of 8886.0\n",
+      "Isaac is a 35 year old Male Smoker with a BMI of 20.6 and insurance cost of 16444.0\n",
+      "Valentina is a 52 year old Female Non-smoker with a BMI of 18.7 and insurance cost of 6420.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "for key in medical_records.keys():\n",
+    "    print(\"{} is a {} year old {} {} with a BMI of {} and insurance cost of {}\".format(key, medical_records[key][\"Age\"], medical_records[key][\"Sex\"], medical_records[key][\"Smoker\"], medical_records[key][\"BMI\"], medical_records[key][\"Insurance_cost\"]))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "4fce26b6-5a26-42f8-b06c-726c4c97c4df",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.11.5"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
