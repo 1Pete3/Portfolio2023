@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import Stack from 'react-bootstrap/Stack';
 import Jupyter from '../components/Jupyter';
+import GetCurrentPage from '../GetCurrentPage';
 const Projects = () => {
   const [projects, setProjects] = useState([]);
 
@@ -21,11 +22,11 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className='projectsPage'>
+    <div className="projectsPage">
       <TopNavBar />
       <h1 className="animate__animated animate__bounceIn">Projects</h1>
       {projects.map((project) => (
-        <div key={project.id}>
+        <div key={project.id} className="projectContent">
           <h1>{project.name}</h1>
           <Button variant="primary" href={project.repoUrl} target="_blank" rel="noopener noreferrer">
             View on Github
@@ -60,11 +61,8 @@ const Projects = () => {
               );
             })}
           </Stack>
-          <ProgressBar>
-          
-
-          </ProgressBar>
-          <Jupyter />
+          <ProgressBar></ProgressBar>
+          <Jupyter className="code" />
         </div>
       ))}
 
