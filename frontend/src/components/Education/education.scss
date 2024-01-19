@@ -1,0 +1,100 @@
+@import "../../styles/scss/index.scss";
+
+#progress {
+    transform: rotate(-90deg);
+  }
+  
+  circle {
+    stroke-width: 12%;
+    fill: none;
+  }
+  
+  .progressCircle {
+    stroke: $tertiary;
+    opacity: 0.5;
+    
+  }
+  
+  #progress .indicator {
+    stroke: $quaternary;
+  }
+  
+  .cardList {
+    display: flex;
+    list-style: none;
+    height: 350px;
+    overflow-x: scroll;
+    background-color: $secondary;
+    padding: 30px;
+    flex: 0 0 100px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border: 4px $tertiary solid ;
+    border-radius: 10px;
+  }
+  
+  
+  
+  .flipcard {
+    flex: 0 0 200px;
+    margin-right: 20px;
+    padding: 1px;
+    cursor: pointer;
+    
+  }
+  
+  .flipcardContent {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  
+  .flipcardFace {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    overflow: hidden;
+    box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+    backface-visibility: hidden;
+  }
+  
+  .flipcardFront {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .flipcardBack {
+    background-color: #f3f3f3;
+    transform: rotateY(180deg);
+  }
+  
+  .flipcardLogo {
+      height: 80%;
+      margin: auto;
+      display: block;
+      padding: 10px;
+    }
+
+  #educationContainer, #skillsContainer, #favoriteContainer{
+    margin: 100px;
+    padding: 50px;
+    border: 5px solid $tertiary;
+  }
+
+  #skillsContainer{
+    justify-content: center;
+  }
+
+  .test{
+    background-color: $primary;
+    padding-bottom: 75px;
+  }
+
+  

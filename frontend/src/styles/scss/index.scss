@@ -105,9 +105,26 @@ footer {
   margin-bottom: 100px
 }
 
-.projectContent{
-  margin-bottom: 100px;
+::-webkit-scrollbar {
+  height: 15px;
+  width: 15px;
+  background: transparent;
+  
 }
+
+::-webkit-scrollbar-thumb {
+  background: $tertiary;
+  border: $filler 2px solid;
+  border-radius: 25px;
+
+}
+
+::-webkit-scrollbar-corner {
+  background: $quaternary;
+}
+
+
+
 
 
 

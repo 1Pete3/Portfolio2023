@@ -5,21 +5,26 @@ import TopNavBar from '../components/TopNavBar';
 import Footer from '../components/Footer';
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import Stack from 'react-bootstrap/Stack';
-import Jupyter from '../components/Jupyter';
-import GetCurrentPage from '../GetCurrentPage';
+
 const Projects = () => {
   const [projects, setProjects] = useState([]);
-
+  
   useEffect(() => {
     axios
       .get('/api/Projects')
       .then((res) => {
         setProjects(res.data);
+       
       })
       .catch((error) => {
         console.log(error);
-      });
-  }, []);
+      })
+  }, []
+  
+  );
+  
+
+  
 
   return (
     <div className="projectsPage">
@@ -62,7 +67,7 @@ const Projects = () => {
             })}
           </Stack>
           <ProgressBar></ProgressBar>
-          <Jupyter className="code" />
+          
         </div>
       ))}
 
